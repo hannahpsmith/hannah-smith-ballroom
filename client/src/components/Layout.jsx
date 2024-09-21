@@ -1,14 +1,13 @@
 import Navbar from './Navbar';
+import { Box, Container } from '@chakra-ui/react';
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
-    <div>
+    <Box>
       <Navbar />
-      <main>
+      <Container as="main" maxW="container.xl" py={4}>
         {children}
-      </main>
-    </div>
+      </Container>
+    </Box>
   );
-};
-
-export default Layout;
+}

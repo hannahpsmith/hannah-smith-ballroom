@@ -1,35 +1,54 @@
-import { Link } from 'react-router-dom';
-import '../styles/Navbar.css';
+import { Link as RouterLink } from 'react-router-dom';
+import { Box, Flex, Link, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <Link to="/login" className="login-btn">Login</Link>
-      </div>
-      <ul className="navbar-links">
-        <li><Link to="/about">About HSB</Link></li>
-        <li><Link to="/notes">Notes</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+    <Flex as="nav" className="navbar" justify="space-between" align="center" p={4} bg="gray.100">
+      <Box className="navbar-left">
+        <Link as={RouterLink} to="/login" className="login-btn" color="teal.500">
+          Login
+        </Link>
+      </Box>
 
-        <li className="dropdown">
-          <button className="dropbtn">Weddings</button>
-          <div className="dropdown-content">
-            <Link to="/weddings/packages">Packages</Link>
-            <Link to="/weddings/gallery">Gallery</Link>
-          </div>
-        </li>
+      <Flex className="navbar-links" gap={4}>
+        <Link as={RouterLink} to="/about" color="teal.500">
+          About HSB
+        </Link>
+        <Link as={RouterLink} to="/notes" color="teal.500">
+          Notes
+        </Link>
+        <Link as={RouterLink} to="/contact" color="teal.500">
+          Contact
+        </Link>
 
-        <li className="dropdown">
-          <button className="dropbtn">Learn to Dance</button>
-          <div className="dropdown-content">
-            <Link to="/learn-to-dance/classes">Classes</Link>
-            <Link to="/learn-to-dance/schedule">Schedule</Link>
-          </div>
-        </li>
-      </ul>
-    </nav>
+        <Menu>
+          <MenuButton as={Button} colorScheme="teal">
+            Weddings
+          </MenuButton>
+          <MenuList>
+            <MenuItem as={RouterLink} to="/weddings/packages">
+              Packages
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/weddings/gallery">
+              Gallery
+            </MenuItem>
+          </MenuList>
+        </Menu>
+
+        <Menu>
+          <MenuButton as={Button} colorScheme="teal">
+            Learn to Dance
+          </MenuButton>
+          <MenuList>
+            <MenuItem as={RouterLink} to="/learn-to-dance/classes">
+              Classes
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/learn-to-dance/schedule">
+              Schedule
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Flex>
+    </Flex>
   );
-};
-
-export default Navbar;
+}
