@@ -1,61 +1,108 @@
-/* Navbar styles with Gold, Black, and White theme */
+/* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #000000; /* Black background */
-    padding: 10px;
-  }
-  
-  .navbar-left .login-btn {
-    color: #FFD700; /* Gold text */
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-links li {
-    margin: 0 15px;
-  }
-  
-  .navbar-links li a {
-    color: #FFD700; /* Gold links */
-    text-decoration: none;
-  }
-  
-  .navbar-links li a:hover {
-    color: #FFFFFF; /* White on hover */
-  }
-  
-  .dropdown .dropbtn {
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
-    padding: 10px;
-    border: none;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF; /* White dropdown */
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: #000000; /* Black text */
-    padding: 12px 16px;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #FFD700; /* Gold background on hover */
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #000000; /* Black background */
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  padding: 0 20px;
+}
+
+/* Inner container */
+.inner {
+  width: 100%;
+  max-width: 1200px; /* Adjust width to fit everything */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure logo, nav, and login are vertically aligned */
+}
+
+/* Logo on the top left */
+.logo {
+  margin-right: 20px; /* Add some space between the logo and nav */
+}
+
+/* Logo on the top left */
+.logo img {
+  width: 150px; /* Adjust this value to resize the logo */
+  height: auto; /* Keep auto to maintain aspect ratio */
+}
+
+/* Center Navigation Links */
+.nav-center {
+  display: flex;
+  gap: 30px; /* Space between all links */
+  flex-grow: 1; /* Allow the nav to take up the remaining space */
+  justify-content: center; /* Center the navigation links */
+}
+
+.nav-link, .dropbtn {
+  font-size: 16px; /* Uniform size */
+  color: #A78F3F; /* Gold */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 10px 0; /* Padding to ensure consistent sizing */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover, .dropbtn:hover {
+  color: #FFFFFF; /* White on hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #000000; /* Black */
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF; /* White */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000000; /* Black */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px; /* Same size as the other links */
+}
+
+.dropdown-content a:hover {
+  background-color: #A78F3F; /* Gold on hover */
+  color: #000000; /* Black text */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Login Link (Top Right) */
+.login {
+  font-size: 16px;
+}
+
+.login a {
+  text-decoration: none;
+  color: #A78F3F; /* Gold */
+}
+
+.login a:hover {
+  color: #FFFFFF; /* White on hover */
+}

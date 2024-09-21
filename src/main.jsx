@@ -12,7 +12,6 @@ import Login from './pages/Login';
 // import Schedule from './pages/learn-to-dance/Schedule';
 import NotFound from './pages/NotFound';  // For handling 404 errors
 
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,8 +33,8 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login />
-      }
-      // Dropdown menu for Weddings section
+      },
+      // // Dropdown menu for Weddings section
       // {
       //   path: 'weddings/packages',
       //   element: <Packages />
@@ -44,7 +43,7 @@ const router = createBrowserRouter([
       //   path: 'weddings/gallery',
       //   element: <Gallery />
       // },
-      // Dropdown menu for Learn to Dance section
+      // // Dropdown menu for Learn to Dance section
       // {
       //   path: 'learn-to-dance/classes',
       //   element: <Classes />
