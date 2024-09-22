@@ -9,11 +9,13 @@ import About from './pages/About';
 import Notes from './pages/Notes';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
-// import Packages from './pages/weddings/Packages';
-// import Gallery from './pages/weddings/Gallery';
-// import Classes from './pages/learn-to-dance/Classes';
-// import Schedule from './pages/learn-to-dance/Schedule';
-import NotFound from './pages/Contact';  // For handling 404 errors
+import WeddingAbout from './pages/Wedding/About';
+import WeddingBook from './pages/Wedding/BookLesson';
+import WeddingFAQ from './pages/Wedding/FAQ';
+import LearnAbout from './pages/LearnToDance/About';
+import LearnBook from './pages/LearnToDance/BookLesson';
+import LearnFAQ from './pages/LearnToDance/FAQ';
+import NotFound from './pages/NotFound';  // For handling 404 errors
 
 const router = createBrowserRouter([
   {
@@ -37,24 +39,30 @@ const router = createBrowserRouter([
         path: 'login',
         element: <Login />
       },
-      // Dropdown menu for Weddings section
-      // {
-      //   path: 'weddings/packages',
-      //   element: <Packages />
-      // },
-      // {
-      //   path: 'weddings/gallery',
-      //   element: <Gallery />
-      // },
-      // // Dropdown menu for Learn to Dance section
-      // {
-      //   path: 'learn-to-dance/classes',
-      //   element: <Classes />
-      // },
-      // {
-      //   path: 'learn-to-dance/schedule',
-      //   element: <Schedule />
-      // }
+      {
+        path: 'weddings/about',
+        element: <WeddingAbout />
+      },
+      {
+        path: 'weddings/book-lesson',
+        element: <WeddingBook />
+      },
+      {
+        path: 'weddings/faq',
+        element: <WeddingFAQ />
+      },
+      {
+        path: 'learn-to-dance/about',
+        element: <LearnAbout />
+      },
+      {
+        path: 'learn-to-dance/book-lesson',
+        element: <LearnBook />
+      },
+      {
+        path: 'learn-to-dance/faq',
+        element: <LearnFAQ />
+      },
     ],
   },
 ]);
