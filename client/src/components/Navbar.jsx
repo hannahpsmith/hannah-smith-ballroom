@@ -13,15 +13,31 @@ export default function Navbar() {
       bg: "brand.300",
     },
   }
+  const loginStyles = {
+    bg: "brand.300",
+    color: "brand.50",
+    _hover: {
+      bg: "brand.50",
+      color: "brand.300"
+    }
+  }
+  const menuStyles = {
+    bg: "brand.50",
+    _hover: {
+      bg: "brand.200",
+      color: "brand.50"
+    }  
+  }
+
   return (
-    <Flex as="nav" className="navbar" justify="space-between" align="top" p={14} bg={"brand.900"} >
-      <Box className="navbar-right" position="absolute" top={2} right={2}>
-        <Button as={RouterLink} to="/login" className="login-btn" bg="brand.300" color="brand.50"  _hover={{ bg: "brand.50", color: "brand.300" }}>
+    <Flex as="nav" className="navbar" justify="space-between" align="top" p={14} bg={"brand.900"} position={'relative'}>
+      <Box className="navbar-right" position="absolute" top={3} right={3}>
+        <Button as={RouterLink} to="/login" className="login-btn" {...loginStyles}>
           Login
         </Button>
       </Box>
 
-      <Flex className="navbar-links" gap={4} position="absolute" bottom={10} left="50%" transform="translateX(-50%)">
+      <Flex className="navbar-links" gap={4} position="absolute" bottom={3} left="50%" transform="translateX(-50%)">
         <Button as={RouterLink} to="/about" {...linkStyles} >
           About HSB
         </Button>
@@ -37,11 +53,14 @@ export default function Navbar() {
             Weddings
           </MenuButton>
           <MenuList>
-            <MenuItem as={RouterLink} to="/weddings/packages">
-              Packages
+            <MenuItem as={RouterLink} to="/weddings/about" {...menuStyles}>
+              About
             </MenuItem>
-            <MenuItem as={RouterLink} to="/weddings/gallery">
-              Gallery
+            <MenuItem as={RouterLink} to="/weddings/book-lesson" {...menuStyles}>
+              Book Lesson
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/weddings/faq" {...menuStyles}>
+              FAQ
             </MenuItem>
           </MenuList>
         </Menu>
@@ -51,11 +70,14 @@ export default function Navbar() {
             Learn to Dance
           </MenuButton>
           <MenuList>
-            <MenuItem as={RouterLink} to="/learn-to-dance/classes">
-              Classes
+            <MenuItem as={RouterLink} to="/learn-to-dance/about" {...menuStyles}>
+              About
             </MenuItem>
-            <MenuItem as={RouterLink} to="/learn-to-dance/schedule">
-              Schedule
+            <MenuItem as={RouterLink} to="/learn-to-dance/book-lesson" {...menuStyles}>
+              Book Lesson
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/learn-to-dance/faq" {...menuStyles}>
+              FAQ
             </MenuItem>
           </MenuList>
         </Menu>
