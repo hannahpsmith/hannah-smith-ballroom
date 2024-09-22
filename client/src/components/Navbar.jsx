@@ -1,6 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Flex, Link, Menu, MenuButton, MenuList, MenuItem, Button, textDecoration } from '@chakra-ui/react';
-// import logo from "../../src/assets/logo-gold.png";
+import { Box, Flex, Link, Menu, MenuButton, MenuList, MenuItem, Button, textDecoration, Image } from '@chakra-ui/react';
+import logo from '../assets/logo-gold.png';
+
 
 export default function Navbar() {
   const linkStyles = {
@@ -30,14 +31,19 @@ export default function Navbar() {
   }
 
   return (
-    <Flex as="nav" className="navbar" justify="space-between" align="top" p={14} bg={"brand.900"} position={'relative'}>
+    // <Flex as="nav" className="navbar" justify="space-between" align="center" p={{ base: 7, md: 8 }} bg={"brand.900"} position={'relative'} minHeight={{ base: '300px', md: '80px' }}>
+    <Flex as="nav" className="navbar" bg={"brand.900"} justify="space-between" align="center" position='relative' p={{ base: 7, md: 10 }} minHeight={{ base: '360px', md: '80px' }}>
+        <Flex justify={['center', 'space-between']} >
+          <Image src={logo} height={20} minW={265} obectFit='cover' />
+        </Flex>
       <Box className="navbar-right" position="absolute" top={3} right={3}>
         <Button as={RouterLink} to="/login" className="login-btn" {...loginStyles}>
           Login
         </Button>
       </Box>
 
-      <Flex className="navbar-links" gap={4} position="absolute" bottom={3} left="50%" transform="translateX(-50%)">
+      <Flex as="nav" className="navbar-links" gap={4} position="absolute" bottom={3} left="50%" transform="translateX(-50%)" direction={{ base: 'column' , md: 'row' }}   
+      >
         <Button as={RouterLink} to="/about" {...linkStyles} >
           About HSB
         </Button>
