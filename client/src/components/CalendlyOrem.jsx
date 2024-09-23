@@ -15,13 +15,21 @@ export default function CalendlyBadgeOrem() {
 
     script.onload = () => {
       window.Calendly.initBadgeWidget({
-        url: 'https://calendly.com/hannahsmithballroom/dance-lesson-orem',
+        url: 'https://calendly.com/hannahsmithballroom/dance-lesson-orem?hide_gdpr_banner=1&background_color=f1f1f1&primary_color=a78f3f',
         text: 'Book in Orem',
         color: '#a78f3f',
         textColor: '#f1f1f1',
         branding: undefined,
       });
+    
+
+    const badge = document.querySelector('.calendly-badge-widget');
+    if (badge) {
+      badge.style.bottom = '80px'; // Adjust this value as needed
+      badge.style.right = '20px'; // Adjust this value as needed
+    }
     };
+
 
     return () => {
       document.head.removeChild(link);
@@ -29,7 +37,7 @@ export default function CalendlyBadgeOrem() {
     };
   }, []);
 
-  return (
-    <Box />
-  );
+    return (
+        <Box />
+    );
 }

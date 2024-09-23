@@ -56,7 +56,7 @@ export default function ContactFormWithSocialButtons() {
                   />
                 </Tooltip>
 
-                <Box as="a" href="#">
+                <Box as="a" href="https://www.instagram.com/hannahsmithballroom/">
                   <IconButton
                     aria-label="instagram"
                     color="brand.300"
