@@ -43,7 +43,7 @@ export default function Navbar() {
       </Box>
 
       <Flex as="nav" className="navbar-links" gap={4} position="absolute" bottom={3} left="50%" transform="translateX(-50%)" direction={{ base: 'column' , md: 'row' }}   
-      >
+      zIndex={2}>
         <Button as={RouterLink} to="/about" {...linkStyles} >
           About HSB
         </Button>
@@ -55,7 +55,7 @@ export default function Navbar() {
         </Button>
 
         <Menu>
-          <MenuButton as={Button} {...linkStyles}>
+          <MenuButton as={Button} {...linkStyles} zIndex={2}>
             Weddings
           </MenuButton>
           <MenuList>
