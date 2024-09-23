@@ -4,7 +4,7 @@ import background from '../assets/background-ink-drop.png';
 const theme = extendTheme({
     colors: {
         brand: {
-            50: "#ffffff", // white
+            50: "#f1f1f1", // light grey
             200: "#c4b47f", // light gold
             300: "#a78f3f", // gold
             400: "#747471", // dark grey
@@ -20,7 +20,6 @@ const theme = extendTheme({
                 backgroundPosition: 'center',
                 height: '100vh',
                 width: '100vw',
-                overflow: 'hidden',
             },
         },
     },
