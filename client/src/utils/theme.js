@@ -1,4 +1,5 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
+import background from '../assets/background-ink-drop.png';
 
 const theme = extendTheme({
     colors: {
@@ -9,6 +10,19 @@ const theme = extendTheme({
             400: "#747471", // dark grey
             900: "#000000", // black
         }
+    },
+    styles: {
+        global: {
+            'html, body': {
+                backgroundImage: `url(${background})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                height: '100vh',
+                width: '100vw',
+                overflow: 'hidden',
+            },
+        },
     },
 })
 
