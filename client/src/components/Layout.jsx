@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { Box, Container,  } from '@chakra-ui/react';
 import CalendlyBadgeOrem from './CalendlyOrem';
 import CalendlyBadgeSLC from './CalendlySLC';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function Layout({ children }) {
       <CalendlyBadgeSLC zIndex={2} />
       <CalendlyBadgeOrem zIndex={3} />
       
+      <Footer />
     </Box>
   );
 }
