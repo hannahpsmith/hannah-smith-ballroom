@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box, Button } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 export default function CalendlyBadgeSLC() {
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function CalendlyBadgeSLC() {
 
     script.onload = () => {
       window.Calendly.initBadgeWidget({
-        url: 'https://calendly.com/hannahsmithballroom/dance-lesson-slc?primary_color=a78f3f',
+        url: 'https://calendly.com/hannahsmithballroom/dance-lesson-slc?hide_gdpr_banner=1&background_color=f1f1f1&primary_color=a78f3f',
         text: 'Book in SLC',
         color: '#a78f3f',
         textColor: '#f1f1f1',
@@ -29,7 +29,7 @@ export default function CalendlyBadgeSLC() {
     };
   }, []);
 
-  return (
-    <Box />
-  );
+    return (
+      <Box />
+    );
 }
