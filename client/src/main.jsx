@@ -15,6 +15,8 @@ import WeddingFAQ from './pages/Wedding/FAQ';
 import LearnAbout from './pages/LearnToDance/About';
 import LearnBook from './pages/LearnToDance/BookLesson';
 import LearnFAQ from './pages/LearnToDance/FAQ';
+import OremBook from './pages/Orem';
+import SLCBook from './pages/SLC';
 import NotFound from './pages/NotFound';  // For handling 404 errors
 
 const router = createBrowserRouter([
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
       {
         path: 'learn-to-dance/faq',
         element: <LearnFAQ />
+      },
+      {
+        path:'book-lesson/orem',
+        element: <OremBook />
+      },
+      {
+        path: 'book-lesson/slc',
+        element: <SLCBook />
       },
     ],
   },
