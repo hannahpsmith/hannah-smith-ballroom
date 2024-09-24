@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from './Navbar';
 import { Box, Container,  } from '@chakra-ui/react';
 import CalendlyBadgeOrem from './CalendlyOrem';
@@ -7,14 +7,14 @@ import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
-    <Box>
+    <Box display="flex" flexDirection="column" minHeight="100vh">
       <Navbar />
       <Container as="main" maxW="container.xl" py={4}>
         {children}
       </Container>
 
-      <CalendlyBadgeSLC zIndex={2} />
-      <CalendlyBadgeOrem zIndex={3} />
+      <CalendlyBadgeSLC />
+      <CalendlyBadgeOrem />
       
       <Footer />
     </Box>
