@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Flex, Image, Button } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import orangedress from '../../assets/orange-dress.jpg';
-import blackdress from '../../assets/black-dress.jpg';
+import orangedress from '../../assets/orange-dress1.jpg';
+import blackdress from '../../assets/black-dress1.jpg';
 
 export default function WeddingAbout() {
     const buttonStyles = {
@@ -77,7 +77,7 @@ export default function WeddingAbout() {
       <Text fontSize="lg" mb={4}>
         Book your lesson or your FREE phone consultation below!
       </Text>
-      <Button as={RouterLink} to="/wedding/book-lesson" {...buttonStyles} mb={3}>
+      <Button as={RouterLink} to="/weddings/book-lesson" {...buttonStyles} mb={3}>
         Book Your Lesson
       </Button>
       {/* add route once made */}
