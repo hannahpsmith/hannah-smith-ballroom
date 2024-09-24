@@ -1,29 +1,29 @@
 {
-  "name": "tech-matchup-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/server.js",
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node server/server.js --ignore client",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^5.3.0"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "apollo-server-express": "^3.13.0",
-    "bcrypt": "^5.1.1",
-    "framer-motion": "^11.5.6",
-    "jsonwebtoken": "^9.0.2",
-    "react-icons": "^5.3.0",
-    "react-router-dom": "^6.26.2"
+    "@apollo/client": "^3.7.14",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "vite": "^5.1.6"
   }
 }
