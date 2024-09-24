@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Flex, Image, Button } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import orangedress from '../../assets/orange-dress.jpg';
-import blackdress from '../../assets/black-dress.jpg';
+import orangedress from '../../assets/orange-dress1.jpg';
+import blackdress from '../../assets/black-dress1.jpg';
 
 export default function LearnAbout() {
     const buttonStyles = {
