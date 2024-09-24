@@ -12,7 +12,7 @@ const theme = extendTheme({
         }
     },
     styles: {
-        global: {
+        global: (props) => ({
             'html, body': {
                 backgroundImage: `url(${background})`,
                 backgroundSize: 'cover',
@@ -23,7 +23,19 @@ const theme = extendTheme({
                 width: '100vw',
                 overflowX: 'hidden',
             },
-        },
+            // '.calendly-badge-widget': {
+            //     zIndex: '1 !important',
+            // },
+            
+            // '.custom-button': {
+            //     position: 'relative',
+            //     zIndex: '10',
+            // },
+            // '.custom-button:hover': {
+            // backgroundColor: '#9F7AEA !important',
+            // color: 'white !important',
+            // },
+        }),
     },
 })
 

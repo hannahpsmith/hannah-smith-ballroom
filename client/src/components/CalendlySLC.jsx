@@ -21,7 +21,14 @@ export default function CalendlyBadgeSLC() {
         textColor: '#f1f1f1',
         branding: undefined,
       });
+
+      const badge = document.querySelector('.calendly-badge-widget');
+      if (badge) {
+          badge.style.right = '183px'; 
+      }
     };
+    
+
 
     return () => {
       document.head.removeChild(link);

@@ -20,7 +20,7 @@ export default function About () {
               mr={4}
               mb={6}
             />
-          <Box textAlign="center" mb={6}>
+          <Box textAlign="center" mb={4}>
               <Text fontSize="lg" mb={4}>
               Hannah was raised in Kent, Washington where her passion for the arts began at just 8 years old when she learned to play the piano.
               </Text>
@@ -30,7 +30,7 @@ export default function About () {
               <Text fontSize="lg" mb={4}>
               Hannah has been a finalist in many competitions throughout the country in the International Ballroom and Latin styles, including California Open Dancesport, BYU Dancesport Championships, and U.S. National Amateur Dancesport Championships. After over a decade of competition and performance experience, Hannah expanded her artistic abilities to Hale Centre Theatre, where she performed in the U.S. premiere of Baz Luhrmann’s Strictly Ballroom the Musical.
               </Text>
-              <Text fontSize="lg" mb={4}>
+              <Text fontSize="lg">
               Hannah enjoys sharing her passion for dance with others. While teaching, she strives to create an environment that promotes confidence, strength, and self-love through the power of movement and expression. Hannah continues to teach, choreograph, and pursue independent performance opportunities globally.
               </Text>
           </Box>
