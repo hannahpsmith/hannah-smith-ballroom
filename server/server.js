@@ -7,7 +7,7 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 7077;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
@@ -16,12 +16,21 @@ const server = new ApolloServer({
 
 const startApolloServer = async () => {
   await server.start();
-  
+
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
-  
+
+  // Apply the auth middleware only to /graphql requests
   app.use('/graphql', expressMiddleware(server, {
-    context: ({ req }) => authMiddleware({ req }),
+    context: async ({ req, res }) => {
+      try {
+        req = await authMiddleware({ req });
+      } catch (err) {
+        res.status(403).json({ message: err.message });
+        return;
+      }
+      return req;
+    },
   }));
 
   if (process.env.NODE_ENV === 'production') {
@@ -30,7 +39,7 @@ const startApolloServer = async () => {
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, '../client/dist/index.html'));
     });
-  } 
+  }
 
   db.once('open', () => {
     app.listen(PORT, () => {
