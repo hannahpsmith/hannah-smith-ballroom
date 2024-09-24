@@ -1,61 +1,106 @@
 /* Navbar styles with Gold, Black, and White theme */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #000000; /* Black background */
-    padding: 10px;
-  }
-  
-  .navbar-left .login-btn {
-    color: #FFD700; /* Gold text */
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-links li {
-    margin: 0 15px;
-  }
-  
-  .navbar-links li a {
-    color: #FFD700; /* Gold links */
-    text-decoration: none;
-  }
-  
-  .navbar-links li a:hover {
-    color: #FFFFFF; /* White on hover */
-  }
-  
-  .dropdown .dropbtn {
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
-    padding: 10px;
-    border: none;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF; /* White dropdown */
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: #000000; /* Black text */
-    padding: 12px 16px;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #FFD700; /* Gold background on hover */
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000; /* Black background */
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo Section with Dynamic Hover Effect */
+.navbar-left img {
+  height: 60px; /* Adjust the logo size */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Scale and add shadow on hover */
+.navbar-left img:hover {
+  transform: scale(1.1); /* Scale the logo slightly */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Add shadow */
+}
+
+/* Login Button Styling */
+.navbar-right .login-btn {
+  color: #FFD700; /* Gold text */
+  background-color: transparent;
+  border: 1px solid #FFD700; /* Gold border */
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-right .login-btn:hover {
+  color: #000000; /* Black text on hover */
+  background-color: #FFD700; /* Gold background on hover */
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add space between links */
+}
+
+.navbar-links li a {
+  color: #FFD700; /* Gold links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #FFFFFF; /* White on hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  background-color: #FFD700; /* Gold button */
+  color: #000000; /* Black text */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown .dropbtn:hover {
+  background-color: #FFFFFF; /* White on hover */
+  color: #000000; /* Black text */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF; /* White dropdown */
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #000000; /* Black text */
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFD700; /* Gold background on hover */
+  color: #000000; /* Black text */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
