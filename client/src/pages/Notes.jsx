@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_NOTES } from '../utils/queries';
 import { ADD_NOTE, DELETE_NOTE } from '../utils/mutations';
+import { Box, Heading, Textarea, Button, List, ListItem, Flex } from '@chakra-ui/react';
 
 const Notes = () => {
   const [noteContent, setNoteContent] = useState('');
@@ -52,27 +53,42 @@ const Notes = () => {
   if (error) return <p>Error fetching notes</p>;
 
   return (
-    <div>
-      <h1>Notes</h1>
+    <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" maxW='920px' mx='auto' mt={6}>
+      <Heading as="h1" size="xl" mb={6} textAlign="center" color="brand.700">
+        Lesson Notes
+      </Heading>
 
-      {}
-      <textarea
-        value={noteContent}
-        onChange={(e) => setNoteContent(e.target.value)}
-        placeholder="Write your notes here..."
-      />
-      <button onClick={handleAddNote}>Add Note</button>
+      <Flex direction="column" align="center" mb={8}>
+        <Textarea
+          value={noteContent}
+          onChange={(e) => setNoteContent(e.target.value)}
+          placeholder="Write your notes here..."
+          size="lg"
+          resize="vertical"
+          mb={4}
+          maxW="700px"
+        />
+        <Button onClick={handleAddNote} bg="#a78f3f" color="brand.50" _hover={{ bg: 'brand.200', color: 'brand.900' }} size="lg">
+          Add Note
+        </Button>
+      </Flex>
 
-      {}
-      <ul>
+      {/* List of notes with a gray box around each individual note */}
+      <List spacing={3} maxW="700px" mx="auto">
         {data.getNotes.map(note => (
-          <li key={note._id}>
-            {note.content}
-            <button onClick={() => handleDeleteNote(note._id)}>Delete</button>
-          </li>
+          <Box key={note._id} p={4} bg="gray.100" boxShadow="md" borderRadius="md" border="1px solid" borderColor="gray.200" mb={3}>
+            <Flex justify="space-between" align="center">
+              <Box>
+                {note.content}
+              </Box>
+              <Button onClick={() => handleDeleteNote(note._id)} colorScheme="red" size="sm">
+                Delete
+              </Button>
+            </Flex>
+          </Box>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Box>
   );
 };
 
