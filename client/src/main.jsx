@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import * as React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import * as React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import theme from './utils/theme';
 
 import App from './App';
@@ -19,6 +20,13 @@ import OremBook from './pages/Orem';
 import SLCBook from './pages/SLC';
 import NotFound from './pages/NotFound';  // For handling 404 errors
 
+// Set up Apollo Client
+const client = new ApolloClient({
+  uri: 'http://localhost:7077/graphql',  // Replace with your GraphQL server URL
+  cache: new InMemoryCache(),
+});
+
+// Define router
 const router = createBrowserRouter([
   {
     path: '/',
@@ -77,9 +85,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Render the application
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider theme={theme}>
-    <RouterProvider router={router} />
-  </ChakraProvider>
+  <ApolloProvider client={client}>  {/* Wrapping with ApolloProvider */}
+    <ChakraProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  </ApolloProvider>
 );

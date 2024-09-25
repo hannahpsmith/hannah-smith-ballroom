@@ -1,6 +1,17 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const noteSchema = new Schema({
+  content: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
 const userSchema = new Schema({
   email: {
     type: String,
@@ -11,6 +22,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  notes: [
+    {
+      type: noteSchema,
+    },
+  ],
 });
 
 userSchema.pre('save', async function(next) {

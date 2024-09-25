@@ -3,6 +3,7 @@ const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const { authMiddleware } = require('./utils/auth');
 const path = require('path');
+const cors = require('cors');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -17,10 +18,11 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
   await server.start();
 
+  app.use(cors());
+
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
-  // Apply the auth middleware only to /graphql requests
   app.use('/graphql', expressMiddleware(server, {
     context: async ({ req, res }) => {
       try {
