@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Flex, Image, Button } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import weddingcouple1 from '../../assets/weddingcouple1.jpg';
-import weddingcouple2 from '../../assets/weddingcouple2.jpg';
+import orangedress from '../../assets/orange-dress1.jpg';
+import blackdress from '../../assets/black-dress1.jpg';
 
 export default function WeddingAbout() {
     const buttonStyles = {
@@ -12,7 +12,7 @@ export default function WeddingAbout() {
       },
     }
     return (
-      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto' align='center'>
+      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'>
       <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4}>
         Wedding First Dance
       </Heading>
@@ -34,10 +34,10 @@ export default function WeddingAbout() {
       </Box>
 
         <Image 
-            src={weddingcouple1} 
-            alt="a man and a women dancing" 
+            src={orangedress} 
+            alt="couple dancing with orange dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "200px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -47,10 +47,10 @@ export default function WeddingAbout() {
       </Flex>
       <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
       <Image 
-            src={weddingcouple2} 
-            alt="two women dancing" 
+            src={blackdress} 
+            alt="dancer in black dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "200px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -71,18 +71,20 @@ export default function WeddingAbout() {
           Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Suspendisse potenti nullam ac tortor vitae purus. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Vitae sapien pellentesque habitant morbi tristique senectus et.
         </Text>
       </Box>
-      </Flex>      
-      <Text fontSize="lg" fontWeight="bold" align="center">
-        Book your lesson or your <Box as="span" color="red" fontSize="2xl" fontWeight="bold">FREE</Box> phone consultation below!
+      </Flex>
+      <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
+      
+      <Text fontSize="lg" mb={4}>
+        Book your lesson or your FREE phone consultation below!
       </Text>
-      <Box p="5" m="5">
-      <Button as={RouterLink} to="/weddings/book-lesson" {...buttonStyles} m={3}>
+      <Button as={RouterLink} to="/weddings/book-lesson" {...buttonStyles} mb={3}>
         Book Your Lesson
       </Button>
-      <Button as={RouterLink} to="/book-consultation" {...buttonStyles} m={3}>
+      {/* add route once made */}
+      <Button  {...buttonStyles}>
         FREE Phone Consultation!
       </Button>
-      </Box>
+      </Flex>
   </Box>
 );
 }

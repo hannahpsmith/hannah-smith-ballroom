@@ -12,7 +12,7 @@ export default function LearnAbout() {
       },
     }
     return (
-      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto' align='center'>
+      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'>
       <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4}>
         Learn to Dance 
       </Heading>
@@ -40,7 +40,7 @@ export default function LearnAbout() {
             src={orangedress} 
             alt="couple dancing with orange dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "200px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -53,7 +53,7 @@ export default function LearnAbout() {
             src={blackdress} 
             alt="dancer in black dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "200px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -78,18 +78,19 @@ export default function LearnAbout() {
         </Text>
       </Box>
       </Flex>
-      <Text fontSize="lg" fontWeight="bold" align="center">
-        Book your lesson or your <Box as="span" color="red" fontSize="2xl" fontWeight="bold">FREE</Box> phone consultation below!
+      <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
+      
+      <Text fontSize="lg" mb={4}>
+        Book your lesson or your FREE phone consultation below!
       </Text>
-      <Box p="5" m="5">
-      <Button as={RouterLink} to="/learn-to-dance/book-lesson" {...buttonStyles} m={3}>
+      <Button as={RouterLink} to="/learn-to-dance/book-lesson" {...buttonStyles} mb={3}>
         Book Your Lesson
       </Button>
       {/* add route once made */}
-      <Button as={RouterLink} to="/book-consultation" {...buttonStyles} m={3}>
+      <Button  {...buttonStyles}>
         FREE Phone Consultation!
       </Button>
-      </Box>
+      </Flex>
   </Box>
 );
 }
