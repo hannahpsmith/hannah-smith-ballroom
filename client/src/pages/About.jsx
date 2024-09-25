@@ -4,7 +4,7 @@ import headshot from '../assets/headshot.jpg';
 export default function About () {
   return (
     <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'>
-        <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4}>
+        <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4} align="center">
           Dancer • Instructor • Choreographer 
         </Heading>
         <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
