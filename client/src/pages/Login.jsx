@@ -45,7 +45,9 @@ const Login = () => {
 
       const { data } = await response.json();
       if (data && data.login && data.login.token) {
+        // Store both token and userId in localStorage
         localStorage.setItem('token', data.login.token);
+        localStorage.setItem('userId', data.login.user._id);
         console.log('Login successful!');
       } else {
         setError('Invalid login');
@@ -73,6 +75,7 @@ const Login = () => {
       const { data } = await response.json();
       if (data && data.signup && data.signup.token) {
         localStorage.setItem('token', data.signup.token);
+        localStorage.setItem('userId', data.signup.user._id);
         console.log('Sign Up successful!');
       } else {
         setError('Sign up failed');

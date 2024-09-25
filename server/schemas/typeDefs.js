@@ -11,10 +11,17 @@ const typeDefs = `
     tech1_votes: Int
     tech2_votes: Int
   }
-  
+
+  type Note {
+    _id: ID!
+    content: String!
+    date: String!
+  }
+
   type User {
     _id: ID!
     email: String!
+    notes: [Note]
   }
 
   type Auth {
@@ -26,6 +33,7 @@ const typeDefs = `
     tech: [Tech]
     matchups(_id: String): [Matchup]
     me: User
+    getNotes(userId: ID!): [Note]
   }
 
   type Mutation {
@@ -33,8 +41,9 @@ const typeDefs = `
     createVote(_id: String!, techNum: Int!): Matchup
     login(email: String!, password: String!): Auth
     signup(email: String!, password: String!): Auth
+    addNote(userId: ID!, content: String!): Note  # Mutation to add a new note
+    deleteNote(userId: ID!, noteId: ID!): Note  # Mutation to delete a note
   }
 `;
 
 module.exports = typeDefs;
-

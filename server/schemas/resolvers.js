@@ -19,6 +19,13 @@ const resolvers = {
       }
       throw new AuthenticationError('Not logged in');
     },
+    getNotes: async (parent, { userId }) => {
+      const user = await User.findById(userId);
+      if (!user) {
+        throw new AuthenticationError('User not found');
+      }
+      return user.notes;
+    },
   },
   Mutation: {
     createMatchup: async (parent, args) => {
@@ -34,7 +41,7 @@ const resolvers = {
       return vote;
     },
     signup: async (parent, { email, password }) => {
-      const user = await User.create({ email, password});
+      const user = await User.create({ email, password });
       const token = signToken(user);
       return { token, user };
     },
@@ -49,6 +56,35 @@ const resolvers = {
       }
       const token = signToken(user);
       return { token, user };
+    },
+    addNote: async (parent, { userId, content }) => {
+      const user = await User.findById(userId);
+      if (!user) {
+        throw new AuthenticationError('User not found');
+      }
+      const newNote = { content, date: new Date().toISOString() };
+      user.notes.push(newNote);
+      await user.save();
+      return user.notes[user.notes.length - 1];
+    },
+    deleteNote: async (parent, { userId, noteId }) => {
+      const user = await User.findById(userId);
+      if (!user) {
+        throw new AuthenticationError('User not found');
+      }
+
+      // Find the note to delete
+      const noteToDelete = user.notes.find(note => note._id.toString() === noteId);
+      if (!noteToDelete) {
+        throw new Error('Note not found');
+      }
+
+      // Filter out the note to delete
+      user.notes = user.notes.filter(note => note._id.toString() !== noteId);
+      await user.save();
+
+      // Return the deleted note
+      return noteToDelete;
     },
   },
 };
