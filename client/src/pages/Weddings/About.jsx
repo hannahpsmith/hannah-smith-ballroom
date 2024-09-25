@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Flex, Image, Button } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import orangedress from '../../assets/orange-dress1.jpg';
-import blackdress from '../../assets/black-dress1.jpg';
+import weddingcouple1 from '../../assets/weddingcouple1.jpg';
+import weddingcouple2 from '../../assets/weddingcouple2.jpg';
 
 export default function WeddingAbout() {
     const buttonStyles = {
@@ -12,7 +12,7 @@ export default function WeddingAbout() {
       },
     }
     return (
-      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'>
+      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'  align='center'>
       <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4}>
         Wedding First Dance
       </Heading>
@@ -34,10 +34,10 @@ export default function WeddingAbout() {
       </Box>
 
         <Image 
-            src={orangedress} 
-            alt="couple dancing with orange dress" 
+            src={weddingcouple1} 
+            alt="a man and a women dancing" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "200px", md: "350px" }}
+            height={{ base: "310px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -47,10 +47,10 @@ export default function WeddingAbout() {
       </Flex>
       <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
       <Image 
-            src={blackdress} 
-            alt="dancer in black dress" 
+            src={weddingcouple2} 
+            alt="two women dancing" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "200px", md: "350px" }}
+            height={{ base: "310px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
@@ -72,19 +72,17 @@ export default function WeddingAbout() {
         </Text>
       </Box>
       </Flex>
-      <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
-      
-      <Text fontSize="lg" mb={4}>
-        Book your lesson or your FREE phone consultation below!
+      <Text fontSize="lg" fontWeight="bold" align="center">
+      Book your lesson or your <Box as="span" color="red" fontSize="2xl" fontWeight="bold">FREE</Box> phone consultation below!
       </Text>
-      <Button as={RouterLink} to="/weddings/book-lesson" {...buttonStyles} mb={3}>
+      <Box p="5" m="5">
+      <Button as={RouterLink} to="/wedding/book-lesson" {...buttonStyles} m={3}>
         Book Your Lesson
       </Button>
-      {/* add route once made */}
-      <Button  {...buttonStyles}>
+      <Button as={RouterLink} to="/book-consultation" {...buttonStyles} m={3}>
         FREE Phone Consultation!
       </Button>
-      </Flex>
+      </Box>
   </Box>
 );
 }
