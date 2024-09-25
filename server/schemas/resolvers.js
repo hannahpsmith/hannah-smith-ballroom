@@ -65,16 +65,26 @@ const resolvers = {
       const newNote = { content, date: new Date().toISOString() };
       user.notes.push(newNote);
       await user.save();
-      return newNote;
+      return user.notes[user.notes.length - 1];
     },
     deleteNote: async (parent, { userId, noteId }) => {
       const user = await User.findById(userId);
       if (!user) {
         throw new AuthenticationError('User not found');
       }
+
+      // Find the note to delete
+      const noteToDelete = user.notes.find(note => note._id.toString() === noteId);
+      if (!noteToDelete) {
+        throw new Error('Note not found');
+      }
+
+      // Filter out the note to delete
       user.notes = user.notes.filter(note => note._id.toString() !== noteId);
       await user.save();
-      return { _id: noteId };
+
+      // Return the deleted note
+      return noteToDelete;
     },
   },
 };
