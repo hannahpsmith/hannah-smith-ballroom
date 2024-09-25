@@ -12,7 +12,7 @@ export default function LearnAbout() {
       },
     }
     return (
-      <Box p={6} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'  align='center'>
+      <Box p={{ base: 3, md: 6 }} bg="brand.50" borderRadius="md" boxShadow="lg" mt={6} maxW='920px' mx='auto'  align='center'>
       <Heading as="h1" size="xl" mb={4} textAlign="center" mx="auto" pb={4}>
         Learn to Dance 
       </Heading>
@@ -23,16 +23,10 @@ export default function LearnAbout() {
           Social Dance
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          Social dancing is all about connection, confidence, and having fun on the dance floor! Whether you&apos;re preparing for a special event, want to feel comfortable dancing in social settings, or are just looking to try something new, I&apos;m here to guide you. From salsa to swing, foxtrot to cha-cha, I&apos;ll help you build the skills you need to dance with ease and enjoyment in any social setting. My goal is to help you feel relaxed and confident, so you can focus on enjoying the moment, no matter the occasion.
         </Text>
         <Text fontSize="lg" mb={4}>
-          In condimentum facilisis porta. Sed nec diam eu diam mattis viverra nulla fringilla. Aenean sit amet erat nunc, a fermentum magna. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui.
-        </Text>
-        <Text fontSize="lg" mb={4}>
-          Cras ornare arcu dui vivamus arcu felis bibendum ut. Varius duis at consectetur lorem donec massa sapien. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Porttitor lacus luctus accumsan tortor posuere ac ut consequat.
-        </Text>
-        <Text fontSize="lg" mb={4}>
-          Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Suspendisse potenti nullam ac tortor vitae purus. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Vitae sapien pellentesque habitant morbi tristique senectus et.
+          In social dance, the emphasis is on enjoying the music and your partner&apos;s company, not perfecting every move. I&apos;ll teach you how to lead or follow comfortably, how to move naturally with the music, and how to adapt to different partners and styles. Whether you&apos;re new to dance or looking to brush up on your skills, I&apos;ll help you develop a strong foundation, so you can confidently step out onto any dance floor!
         </Text>
       </Box>
 
@@ -40,11 +34,11 @@ export default function LearnAbout() {
             src={orangedress} 
             alt="couple dancing with orange dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "300px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
-            mr={4}
+            m={4}
             mb={6}
           />
       </Flex>
@@ -53,11 +47,11 @@ export default function LearnAbout() {
             src={blackdress} 
             alt="dancer in black dress" 
             width={{ base: "200px", md: "350px" }}
-            height={{ base: "310px", md: "350px" }}
+            height={{ base: "300px", md: "350px" }}
             borderRadius="3%" 
             boxShadow="lg"
             objectFit="cover"
-            mr={4}
+            m={4}
             mb={6}
           />
       <Box textAlign="center" mb={6} pb={3}>
@@ -65,16 +59,10 @@ export default function LearnAbout() {
           Competition Dance
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          For those looking to take their dancing to the next level, competition dance provides an exciting challenge! Whether you&apos;re competing locally or preparing for national events, I offer personalized coaching that focuses on technique, performance quality, and the mindset needed to succeed on the competitive stage. With my experience in ballroom competitions, I&apos;ll help you refine your style and push your skills to new heights.
         </Text>
         <Text fontSize="lg" mb={4}>
-          In condimentum facilisis porta. Sed nec diam eu diam mattis viverra nulla fringilla. Aenean sit amet erat nunc, a fermentum magna. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui.
-        </Text>
-        <Text fontSize="lg" mb={4}>
-          Cras ornare arcu dui vivamus arcu felis bibendum ut. Varius duis at consectetur lorem donec massa sapien. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Porttitor lacus luctus accumsan tortor posuere ac ut consequat.
-        </Text>
-        <Text fontSize="lg" mb={4}>
-          Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Suspendisse potenti nullam ac tortor vitae purus. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Vitae sapien pellentesque habitant morbi tristique senectus et.
+          I also offer Pro-Am lessons, meaning I&apos;ll be your partner on the competition floor. This allows you to focus fully on your dancing, knowing you&apos;re working with a professional who can help guide and support you during performances. Competition dancing is about precision, discipline, and artistry, and I&apos;m here to support you through every part of the process—from perfecting your technique to understanding what judges look for. Together, we&apos;ll build routines that showcase your strengths, polish your presentation, and cultivate the confidence needed to shine under pressure. Let&apos;s work together to help you stand out and achieve your competitive goals!
         </Text>
       </Box>
       </Flex>      
