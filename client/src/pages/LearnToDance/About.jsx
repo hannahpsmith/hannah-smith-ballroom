@@ -81,14 +81,14 @@ export default function LearnAbout() {
       <Text fontSize="lg" fontWeight="bold" align="center">
       Book your lesson or your <Box as="span" color="red" fontSize="2xl" fontWeight="bold">FREE</Box> phone consultation below!
       </Text>
-      <Box p="5" m="5">
+      <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" p="5" m="5">
       <Button as={RouterLink} to="/learn-to-dance/book-lesson" {...buttonStyles} m={3}>
         Book Your Lesson
       </Button>
       <Button as={RouterLink} to="/book-consultation" {...buttonStyles} m={3}>
         FREE Phone Consultation!
       </Button>
-      </Box>
+      </Flex>
   </Box>
 );
 }

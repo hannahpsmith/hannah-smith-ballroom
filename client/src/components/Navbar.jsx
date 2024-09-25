@@ -57,7 +57,7 @@ export default function Navbar() {
             {/* Using VStack to space out buttons */}
             <VStack spacing={6} align="stretch" mt={8}>
               <Button as={RouterLink} to="/about" {...linkStyles} w="100%" onClick={onClose}>
-                About HSB
+                About Hannah
               </Button>
               <Button as={RouterLink} to="/notes" {...linkStyles} w="100%" onClick={onClose}>
                 Notes
@@ -114,7 +114,7 @@ export default function Navbar() {
       {/* Full-width Navbar for screens larger than 1024px (centered) */}
       <Flex as="nav" className="navbar-links" gap={2} display={{ base: "none", lg: "flex" }} justify="center" align="center" flexGrow={1}>
         <Button as={RouterLink} to="/about" {...linkStyles}>
-          About HSB
+          About Hannah
         </Button>
         <Button as={RouterLink} to="/notes" {...linkStyles}>
           Notes
