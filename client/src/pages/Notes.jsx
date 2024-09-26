@@ -75,18 +75,23 @@ const Notes = () => {
 
       {/* List of notes with a gray box around each individual note */}
       <List spacing={3} maxW="700px" mx="auto">
-        {data.getNotes.map(note => (
-          <Box key={note._id} p={4} bg="gray.100" boxShadow="md" borderRadius="md" border="1px solid" borderColor="gray.200" mb={3}>
-            <Flex justify="space-between" align="center">
-              <Box>
-                {note.content}
-              </Box>
-              <Button onClick={() => handleDeleteNote(note._id)} colorScheme="red" size="sm">
-                Delete
-              </Button>
-            </Flex>
-          </Box>
-        ))}
+      {data && data.getNotes ? (
+          data.getNotes.map(note => (
+            <Box key={note._id} p={4} bg="gray.100" boxShadow="md" borderRadius="md" border="1px solid" borderColor="gray.200" mb={3}>
+              <Flex justify="space-between" align="center">
+                <Box>
+                  {note.content}
+                </Box>
+                <Button onClick={() => handleDeleteNote(note._id)} colorScheme="red" size="sm">
+                  Delete
+                </Button>
+              </Flex>
+            </Box>
+          ))
+        ) : (
+          <p>No notes available</p>
+        )}
+
       </List>
     </Box>
   );
