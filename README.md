@@ -2,7 +2,26 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Welcome to the **Hannah Smith Ballroom** website application! This platform is designed to showcase ballroom dance instruction services, including private lessons for social dance, wedding first dances, and dance competitions. It is an interactive full-stack application, utilizing modern web technologies such as React, Chakra UI, Emailjs, Vite, and MongoDB.
+**Hannah Smith Ballroom** is a responsive web application designed to streamline the dance lesson booking process for clients of professional dance instructor **Hannah Smith**. The app allows users to view services, book lessons, and contact the instructor directly for wedding dances, competition training, and social dancing. Built as a full-stack MERN application, it integrates modern web technologies to provide a polished, user-friendly experience.
+
+### Key Features
+* **Service booking via Calendly integration** for wedding dances, competition training, and social dance lessons.
+* **Contact** form using EmailJS for direct communication with Hannah Smith.
+* **User authentication** for secure lesson management using JWT.
+* **Responsive design** with Chakra UI for an intuitive experience across devices.
+* **GraphQL-powered backend** with MongoDB to efficiently handle user data.
+* **Polished UI** that reflects the elegance of ballroom dance.
+
+### Technologies Used
+* **React** for the front-end framework
+* **Node.js** and **Express.js** for the back-end server
+* **MongoDB** and **Mongoose ODM** for database management
+* **GraphQL** for querying and mutating data
+* **JWT (JSON Web Tokens)** for authentication
+* **Chakra UI** for styling
+* **EmailJS** for handling contact form submissions
+* **Calendly** for scheduling lessons
+* **Render** for deployment
 
 
 ## Table of Contents
@@ -18,7 +37,7 @@ Welcome to the **Hannah Smith Ballroom** website application! This platform is d
 To use this application, you must have Node.js installed. Before running the application, install the necessary dependencies by typing `npm install` into the terminal.
 
 ## Usage
-This site is deployed at https://hannahsmithballroom.com
+View the deployed site [here](https://hannah-smith-ballroom.onrender.com/)
 
 Navigate through the sections using the navigation bar.
 * **About Hannah**: Learn about Hannah's background, experience and dance philosophy.
