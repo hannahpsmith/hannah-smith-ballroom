@@ -23,7 +23,7 @@ import NotFound from './pages/NotFound';  // For handling 404 errors
 
 // Set up Apollo Client
 const client = new ApolloClient({
-  uri: 'http://localhost:7077/graphql',  // Replace with your GraphQL server URL
+  uri: '/graphql',  // Replace with your GraphQL server URL
   cache: new InMemoryCache(),
 });
 
