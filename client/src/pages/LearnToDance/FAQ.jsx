@@ -18,46 +18,52 @@ export default function LearnFAQ() {
 
     <Box textAlign="center" mb={6} pr={3} pl={3}>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-         Lorem ipsum dolor sit amet?
+          Why private lessons?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          Private lessons allow for personalized attention and tailored instruction to your specific goals and skill level. Whether you're preparing for a wedding, competition, or just learning for fun, private lessons give you the focused time needed to progress at your own pace. I can customize each lesson to fit your needs and help you feel confident on the dance floor.
         </Text>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-         Consectetur adipiscing elit?
+          What should I wear to my lesson?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          Wear anything comfortable that allows you to move freely! The most important thing is that you feel relaxed and can focus on dancing, so choose clothes that let you move easily and don’t restrict your motion. However, if your lesson is for a date night activity or a special occasion, feel free to dress up! Just make sure your outfit still allows you to move comfortably, and we’ll make the experience fun, whether you're dressed casually or looking sharp for a night out.        
+          </Text>
+        <Heading as="h2" size="md" fontSize="23px" pb={4}>
+          Do I need to purchase shoes specifically for dance?
+        </Heading>
+        <Text fontSize="lg" mb={4}>
+          That depends on your dance goals! For beginners, regular shoes are perfectly fine as long as they’re clean—taking care of our dance studio floors is important. If you’re planning to take more advanced or frequent lessons, investing in proper dance shoes can help with your technique and make dancing more comfortable. I’m happy to guide you on the right footwear for your needs.        
+          </Text>
+        <Heading as="h2" size="md" fontSize="23px" pb={4}>
+          Where are you located?
+        </Heading>
+        <Text fontSize="lg" mb={4}>
+          I teach in two locations: Ballroom Utah in Salt Lake City and Strictly Ballroom in Orem. If another space is preferred, please contact me directly, and we can discuss options that best fit your needs.
         </Text>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-          Sed do eiusmod tempor?
+          What payment methods do you accept?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          I accept Venmo and any cards accepted by Square, so you can choose whichever payment method is most convenient for you.
         </Text>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-          Incididunt ut labore et dolore?
+          Do I have to purchase a package prior to my lesson?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          Nope! You can decide whether you’d like to pay per lesson or purchase a package after your first lesson. There’s no need to make a decision beforehand—let’s just focus on having a great first lesson together!
         </Text>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-          Magna aliqua. Ut enim ad?
+          What styles of dance do you teach?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          I specialize in international Ballroom, Latin, and social dances, including but not limited to waltz, tango, salsa, foxtrot, swing, cha-cha, and much more! If you’re looking to learn a specific style, feel free to ask, and we can incorporate it into your lessons. I am also cross-trained in many dance genres outside of ballroom.
         </Text>
         <Heading as="h2" size="md" fontSize="23px" pb={4}>
-          Minim veniam, quis nostrud exercitation?
+          What happens if I need to cancel or reschedule my lesson?
         </Heading>
         <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
-        </Text>
-        <Heading as="h2" size="md" fontSize="23px" pb={4}>
-          Ullamco laboris nisi ut aliquip?
-        </Heading>
-        <Text fontSize="lg" mb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
+          If you need to cancel or reschedule, you can do so through your Calendly booking or by contacting me directly. Please note that lessons canceled less than 24 hours in advance may be subject to a cancellation fee, so be sure to let me know as soon as possible if something comes up!
         </Text>
       </Box>
   </Flex>
