@@ -64,7 +64,7 @@ export default function WeddingAbout() {
       Book your lesson or your <Box as="span" color="red" fontSize="2xl" fontWeight="bold">FREE</Box> phone consultation below!
       </Text>
       <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" p="5" m="5">
-      <Button as={RouterLink} to="/wedding/book-lesson" {...buttonStyles} m={3}>
+      <Button as={RouterLink} to="weddings/book-lesson" {...buttonStyles} m={3}>
         Book Your Lesson
       </Button>
       <Button as={RouterLink} to="/book-consultation" {...buttonStyles} m={3}>
